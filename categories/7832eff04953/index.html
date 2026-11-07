@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的技术笔记</title>
+<meta name="description" content="记录学习与踩坑，方便日后查阅">
+<meta name="theme-color" content="#6366f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236366f1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-size%3D%2234%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3EW%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="/assets/style.css?v=e675bc3b">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="技术笔记">
+<script>document.documentElement.dataset.theme = localStorage.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+if (sessionStorage.siteKey || localStorage.siteKey) document.documentElement.classList.add('has-key')</script>
+</head>
+<body class="locked" data-site="我的技术笔记">
+<header class="nav">
+  <a class="brand" href="/"><span class="logo">W</span><span>我的技术笔记</span></a>
+  <nav>
+    <a href="/">首页</a>
+    <a href="/categories/">分类</a>
+    <a href="/tags/">标签</a>
+    <a href="/archive/">归档</a>
+    <button id="search-btn" class="search-btn" aria-label="搜索"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>搜索</span><kbd>/</kbd></button>
+    <button id="theme-btn" class="icon-btn" aria-label="切换主题" title="切换主题"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button id="logout-btn" class="icon-btn" title="退出登录" aria-label="退出登录"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg></button>
+  </nav>
+</header>
+<main><section class="login" id="login">
+  <div class="login-art" aria-hidden="true">
+    <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+    <div class="grid-bg"></div>
+    <div class="art-content">
+      <div class="art-brand"><span class="logo">W</span>我的技术笔记</div>
+      <h2>记录 · 思考 · 沉淀</h2>
+      <p>记录学习与踩坑，方便日后查阅</p>
+      <div class="window float">
+        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span>notes.js</span></div>
+<pre><span class="k">const</span> notes = <span class="k">await</span> <span class="f">open</span>(<span class="s">'我的知识库'</span>);
+<span class="k">for</span> (<span class="k">const</span> idea <span class="k">of</span> today) {
+  notes.<span class="f">write</span>(idea);  <span class="c">// 好记性不如烂笔头</span>
+}
+<span class="f">search</span>(<span class="s">'那个命令怎么写来着'</span>); <span class="c">// ✓ 找到了</span></pre>
+      </div>
+      <div class="chips float2"><span># Linux</span><span># Git</span><span># 前端</span><span># 踩坑</span></div>
+    </div>
+  </div>
+  <div class="login-side">
+    <form class="login-box" id="login-form">
+      <span class="logo big">W</span>
+      <h1>欢迎回来</h1>
+      <p class="sub">登录后查看笔记内容</p>
+      <label class="field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input name="user" placeholder="账号" autocomplete="username" required></label>
+      <label class="field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><input name="pass" type="password" placeholder="密码" autocomplete="current-password" required><button type="button" class="eye" id="toggle-pass" aria-label="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></label>
+      <label class="remember"><input type="checkbox" name="remember"><span>在这台设备上记住我</span></label>
+      <button type="submit" class="btn-primary"><span>登 录</span></button>
+      <div class="login-err" id="login-err" role="alert"></div>
+      <div class="login-foot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> 内容端到端加密，仅凭密码可解锁</div>
+    </form>
+  </div>
+</section>
+<div id="locked" hidden data-enc="T4k/UYO05B58//Rl.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"></div></main>
+<footer><span class="logo sm">W</span> © 2026 whg · 我的技术笔记</footer>
+<div id="search" class="search hidden">
+  <div class="search-box">
+    <label class="search-field"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search-input" placeholder="搜索标题、标签、正文…" autocomplete="off"><kbd>Esc</kbd></label>
+    <ul id="search-results"></ul>
+    <div class="search-tip"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>Enter</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div>
+  </div>
+</div>
+<button id="to-top" class="to-top" aria-label="回到顶部"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div id="lightbox" class="lightbox" hidden></div>
+<script src="/assets/main.js?v=e675bc3b"></script>
+</body>
+</html>

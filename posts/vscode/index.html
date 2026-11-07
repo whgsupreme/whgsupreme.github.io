@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的技术笔记</title>
+<meta name="description" content="记录学习与踩坑，方便日后查阅">
+<meta name="theme-color" content="#6366f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236366f1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-size%3D%2234%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3EW%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="/assets/style.css?v=e675bc3b">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="技术笔记">
+<script>document.documentElement.dataset.theme = localStorage.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+if (sessionStorage.siteKey || localStorage.siteKey) document.documentElement.classList.add('has-key')</script>
+</head>
+<body class="locked" data-site="我的技术笔记">
+<header class="nav">
+  <a class="brand" href="/"><span class="logo">W</span><span>我的技术笔记</span></a>
+  <nav>
+    <a href="/">首页</a>
+    <a href="/categories/">分类</a>
+    <a href="/tags/">标签</a>
+    <a href="/archive/">归档</a>
+    <button id="search-btn" class="search-btn" aria-label="搜索"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>搜索</span><kbd>/</kbd></button>
+    <button id="theme-btn" class="icon-btn" aria-label="切换主题" title="切换主题"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button id="logout-btn" class="icon-btn" title="退出登录" aria-label="退出登录"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg></button>
+  </nav>
+</header>
+<main><section class="login" id="login">
+  <div class="login-art" aria-hidden="true">
+    <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+    <div class="grid-bg"></div>
+    <div class="art-content">
+      <div class="art-brand"><span class="logo">W</span>我的技术笔记</div>
+      <h2>记录 · 思考 · 沉淀</h2>
+      <p>记录学习与踩坑，方便日后查阅</p>
+      <div class="window float">
+        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span>notes.js</span></div>
+<pre><span class="k">const</span> notes = <span class="k">await</span> <span class="f">open</span>(<span class="s">'我的知识库'</span>);
+<span class="k">for</span> (<span class="k">const</span> idea <span class="k">of</span> today) {
+  notes.<span class="f">write</span>(idea);  <span class="c">// 好记性不如烂笔头</span>
+}
+<span class="f">search</span>(<span class="s">'那个命令怎么写来着'</span>); <span class="c">// ✓ 找到了</span></pre>
+      </div>
+      <div class="chips float2"><span># Linux</span><span># Git</span><span># 前端</span><span># 踩坑</span></div>
+    </div>
+  </div>
+  <div class="login-side">
+    <form class="login-box" id="login-form">
+      <span class="logo big">W</span>
+      <h1>欢迎回来</h1>
+      <p class="sub">登录后查看笔记内容</p>
+      <label class="field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input name="user" placeholder="账号" autocomplete="username" required></label>
+      <label class="field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><input name="pass" type="password" placeholder="密码" autocomplete="current-password" required><button type="button" class="eye" id="toggle-pass" aria-label="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></label>
+      <label class="remember"><input type="checkbox" name="remember"><span>在这台设备上记住我</span></label>
+      <button type="submit" class="btn-primary"><span>登 录</span></button>
+      <div class="login-err" id="login-err" role="alert"></div>
+      <div class="login-foot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> 内容端到端加密，仅凭密码可解锁</div>
+    </form>
+  </div>
+</section>
+<div id="locked" hidden data-enc="Is3zKz4fwIC+IARg.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"></div></main>
+<footer><span class="logo sm">W</span> © 2026 whg · 我的技术笔记</footer>
+<div id="search" class="search hidden">
+  <div class="search-box">
+    <label class="search-field"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search-input" placeholder="搜索标题、标签、正文…" autocomplete="off"><kbd>Esc</kbd></label>
+    <ul id="search-results"></ul>
+    <div class="search-tip"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>Enter</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div>
+  </div>
+</div>
+<button id="to-top" class="to-top" aria-label="回到顶部"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div id="lightbox" class="lightbox" hidden></div>
+<script src="/assets/main.js?v=e675bc3b"></script>
+</body>
+</html>

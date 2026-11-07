@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的技术笔记</title>
+<meta name="description" content="记录学习与踩坑，方便日后查阅">
+<meta name="theme-color" content="#6366f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236366f1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-size%3D%2234%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3EW%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="/assets/style.css?v=e675bc3b">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="技术笔记">
+<script>document.documentElement.dataset.theme = localStorage.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+if (sessionStorage.siteKey || localStorage.siteKey) document.documentElement.classList.add('has-key')</script>
+</head>
+<body class="locked" data-site="我的技术笔记">
+<header class="nav">
+  <a class="brand" href="/"><span class="logo">W</span><span>我的技术笔记</span></a>
+  <nav>
+    <a href="/">首页</a>
+    <a href="/categories/">分类</a>
+    <a href="/tags/">标签</a>
+    <a href="/archive/">归档</a>
+    <button id="search-btn" class="search-btn" aria-label="搜索"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>搜索</span><kbd>/</kbd></button>
+    <button id="theme-btn" class="icon-btn" aria-label="切换主题" title="切换主题"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button id="logout-btn" class="icon-btn" title="退出登录" aria-label="退出登录"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg></button>
+  </nav>
+</header>
+<main><section class="login" id="login">
+  <div class="login-art" aria-hidden="true">
+    <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+    <div class="grid-bg"></div>
+    <div class="art-content">
+      <div class="art-brand"><span class="logo">W</span>我的技术笔记</div>
+      <h2>记录 · 思考 · 沉淀</h2>
+      <p>记录学习与踩坑，方便日后查阅</p>
+      <div class="window float">
+        <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span>notes.js</span></div>
+<pre><span class="k">const</span> notes = <span class="k">await</span> <span class="f">open</span>(<span class="s">'我的知识库'</span>);
+<span class="k">for</span> (<span class="k">const</span> idea <span class="k">of</span> today) {
+  notes.<span class="f">write</span>(idea);  <span class="c">// 好记性不如烂笔头</span>
+}
+<span class="f">search</span>(<span class="s">'那个命令怎么写来着'</span>); <span class="c">// ✓ 找到了</span></pre>
+      </div>
+      <div class="chips float2"><span># Linux</span><span># Git</span><span># 前端</span><span># 踩坑</span></div>
+    </div>
+  </div>
+  <div class="login-side">
+    <form class="login-box" id="login-form">
+      <span class="logo big">W</span>
+      <h1>欢迎回来</h1>
+      <p class="sub">登录后查看笔记内容</p>
+      <label class="field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input name="user" placeholder="账号" autocomplete="username" required></label>
+      <label class="field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><input name="pass" type="password" placeholder="密码" autocomplete="current-password" required><button type="button" class="eye" id="toggle-pass" aria-label="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></label>
+      <label class="remember"><input type="checkbox" name="remember"><span>在这台设备上记住我</span></label>
+      <button type="submit" class="btn-primary"><span>登 录</span></button>
+      <div class="login-err" id="login-err" role="alert"></div>
+      <div class="login-foot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> 内容端到端加密，仅凭密码可解锁</div>
+    </form>
+  </div>
+</section>
+<div id="locked" hidden data-enc="QohTPDLqsf79fJDw.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"></div></main>
+<footer><span class="logo sm">W</span> © 2026 whg · 我的技术笔记</footer>
+<div id="search" class="search hidden">
+  <div class="search-box">
+    <label class="search-field"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search-input" placeholder="搜索标题、标签、正文…" autocomplete="off"><kbd>Esc</kbd></label>
+    <ul id="search-results"></ul>
+    <div class="search-tip"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>Enter</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div>
+  </div>
+</div>
+<button id="to-top" class="to-top" aria-label="回到顶部"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div id="lightbox" class="lightbox" hidden></div>
+<script src="/assets/main.js?v=e675bc3b"></script>
+</body>
+</html>
